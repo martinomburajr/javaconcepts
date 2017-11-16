@@ -60,17 +60,36 @@ public class NumberGenerator {
     }
 
     public static void main(String [] args){
+        FileLengthBound fileLengthBound1 = new FileLengthBound(300,20);
+        FileLengthBound fileLengthBound2 = new FileLengthBound(5325,10000);
+        FileLengthBound fileLengthBound3 = new FileLengthBound(46736,434);
+        FileLengthBound fileLengthBound4 = new FileLengthBound(1000000,7);
+
+        FileLengthBound[] fileLengthBoundArr = new FileLengthBound[]{fileLengthBound1,fileLengthBound2,fileLengthBound3,fileLengthBound4};
+
         try {
-            intGenerator("test1",1000000,9);
+            createTests("crazyTests", fileLengthBoundArr);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try {
-            NumAns reader = reader(OUTPUT_FILE_PATH + "\\" + "test1");
-            String s = "";
-        } catch (IOException e) {
-            e.printStackTrace();
+//        try {
+//            intGenerator("test1",1000000,9);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        try {
+//            NumAns reader = reader(OUTPUT_FILE_PATH + "\\" + "test1");
+//            String s = "";
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+    }
+
+    public static void createTests(String baseNames, FileLengthBound[] fileLengthBound) throws IOException {
+        for (int i = 0; i < fileLengthBound.length; i++) {
+            intGenerator(baseNames + "" + i, fileLengthBound[i].length, fileLengthBound[i].bound);
         }
     }
 }
