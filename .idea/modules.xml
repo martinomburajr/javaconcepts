@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaconcepts.iml" filepath="$PROJECT_DIR$/.idea/modules/javaconcepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/parallelism.iml" filepath="$PROJECT_DIR$/.idea/modules/parallelism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/parallelism_main.iml" filepath="$PROJECT_DIR$/.idea/modules/parallelism_main.iml" group="parallelism" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/parallelism_test.iml" filepath="$PROJECT_DIR$/.idea/modules/parallelism_test.iml" group="parallelism" />
+    </modules>
+  </component>
+</project>
