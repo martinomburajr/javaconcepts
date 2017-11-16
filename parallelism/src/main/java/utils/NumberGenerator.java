@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class NumberGenerator {
     private static String OUTPUT_FILE_PATH = "C:\\Users\\User\\Desktop\\Other\\scar\\android\\javaconcepts\\parallelism\\src\\main\\resources";
-
+    private static String OUTPUT_FILE_LINUX = "home\\martinomburajr\\Desktop\\martinomburajr\\javaconcepts\\parallelism\\src\\main\\resources";
 
     public static File intGenerator(String name, int length, int bounds) throws IOException {
-        String finalPath = (OUTPUT_FILE_PATH +"\\" + name);
+        String finalPath = (OUTPUT_FILE_LINUX +"\\" + name);
         File file = new File(finalPath);
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(finalPath));
         Random random = new Random();
@@ -61,16 +61,16 @@ public class NumberGenerator {
 
     public static void main(String [] args){
         try {
-            intGenerator("test1",1000000,9);
+            intGenerator("test1",10000,9);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try {
-            NumAns reader = reader(OUTPUT_FILE_PATH + "\\" + "test1");
-            String s = "";
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            NumAns reader = reader(OUTPUT_FILE_PATH + "\\" + "test1");
+//            String s = "";
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }
